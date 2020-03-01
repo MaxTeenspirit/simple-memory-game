@@ -71,8 +71,8 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 // RESTART
 restartButton.addEventListener('click', () => {
   cards.forEach(card => card.classList.remove('flip'));
-  cards.forEach(card => card.addEventListener('click', flipCard));
   setTimeout(() => {
+    cards.forEach(card => card.addEventListener('click', flipCard));
     resetBoard();
     shuffle();
   }, 500)
